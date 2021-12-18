@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 95% !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.modal{
+  padding-left: 0px !important;
+  font-family: 'Roboto', sans-serif;
+}
+.modal-main-content{
+  -webkit-box-shadow: 0px 100px 54px 0px rgba(0,0,0,0.06); 
+box-shadow: 0px 100px 54px 0px rgba(0,0,0,0.06);
+}
+.modal-content{
+  border-radius: 10px;
+  overflow: hidden !important
+}
+.modal-body{
+  padding: 0px !important;
+  background-color: #f1f1f1 !important;
+}
+.accordion-button:active {
+  color: black !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(0,0,0,.125) !important;
+  color: black !important;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-header{
+  position: static !important;
+}
+.accordion-header .accordion-button{
+  position: static !important;
+  font-weight: bold;
+  background-color: transparent !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion .accordion-item{
+  position: relative !important;
+}
+/* toggle button */
+
+.switch-parent{
+  position: absolute;
+  left: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 500;
+  display: grid;
+  place-content: center;
+}
+
+.custom-switch-off{
+  display: grid;
+  align-content: center;
+  width: 40px;
+  height: 18px;
+  padding: 2px;
+  background-color:rgba(170, 170, 170, 0.781);
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.custom-switch-on{
+  display: grid;
+  align-content: center;
+  justify-content: end;
+  width: 40px;
+  height: 18px;
+  padding: 2px;
+  background-color:rgba(3, 255, 3, 0.239);
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.custom-switch-on .custom-slider{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(15, 189, 15);
+}
+.custom-slider{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
 }
